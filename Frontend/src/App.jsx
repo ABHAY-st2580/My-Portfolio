@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Navbar from './components/Navbar';
 import CodingProfiles from './pages/Coding_profiles';
 import AcademicProfiles from './pages/Academic_profiles';
-// import GithubProfiles from './pages/Github_profiles';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
@@ -14,7 +13,7 @@ import './App.css'
 import './index.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("projects");
+  const [currentPage, setCurrentPage] = useState("home");
 
   return (
       <div className="app-container">
@@ -25,7 +24,6 @@ function App() {
           {currentPage === "projects" && <Projects />}
           {currentPage === "coding-profiles" && <CodingProfiles />}
           {currentPage === "academic-profiles" && <AcademicProfiles />}
-          {/* {currentPage === "github-profiles" && <GithubProfiles />} */}
           {currentPage === "contact" && <Contact />}
           {currentPage === "skills" && <Skills />}
         </div>

@@ -3,7 +3,7 @@ import favicon from '../assets/Portfolioicon.png';
 function Navbar({ setCurrentPage }) {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark shadow-sm" style={{ backgroundColor: "#020b26" }}>
+      <nav className="navbar navbar-expand-lg navbar-dark shadow-sm nav-link" style={{ backgroundColor: "#020b26", position: "sticky", top: 0, zIndex: 1000}}>
         <div className="container">
           <img
               src={favicon}
@@ -16,7 +16,7 @@ function Navbar({ setCurrentPage }) {
                 marginRight: "10px"
               }}
             />
-          <a className="navbar-brand fw-bold" href="#">
+          <a className="navbar-brand fw-bold">
             Abhay Singh Tomar
           </a>
 
@@ -35,15 +35,23 @@ function Navbar({ setCurrentPage }) {
               style={{ "--bs-scroll-height": "100px" }}
             >
               <li className="nav-item mx-2">
-                <a className="nav-link active text-white" onClick={() => setCurrentPage("home")}>Home</a>
+                <a className="nav-link active text-white" style={{ cursor: "pointer" }} onClick={() => setCurrentPage("home")}>Home</a>
               </li>
 
               <li className="nav-item mx-2">
-                <a className="nav-link text-white" onClick={() => setCurrentPage("skills")}>Skills</a>
+                <a className="nav-link text-white" style={{ cursor: "pointer" }} onClick={() => setCurrentPage("skills")}>Skills</a>
+              </li>
+              
+              <li className="nav-item mx-2">
+                <a className="nav-link text-white" style={{ cursor: "pointer" }} href="/resume.pdf" download>
+                  Download_Resume
+                </a>
               </li>
 
               <li className="nav-item mx-2">
-                <a className="nav-link text-white" onClick={() => setCurrentPage("projects")}>Projects</a>
+                <a className="nav-link text-white" style={{ cursor: "pointer" }} onClick={() => setCurrentPage("projects")}>
+                  Projects
+                </a>
               </li>
 
               <li className="nav-item dropdown mx-2">
@@ -58,10 +66,8 @@ function Navbar({ setCurrentPage }) {
                 </a>
 
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" onClick={() => setCurrentPage("coding-profiles")}>Coding Profiles</a></li>
-                  <li><a className="dropdown-item" onClick={() => setCurrentPage("academic-profiles")}>Academic Profiles</a></li>
-                  <li><a className="dropdown-item" onClick={() => setCurrentPage("github-profiles")}>Github Profiles</a></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  <li><a className="dropdown-item" style={{ cursor: "pointer" }} onClick={() => setCurrentPage("coding-profiles")}>Coding Profiles</a></li>
+                  <li><a className="dropdown-item" style={{ cursor: "pointer" }} onClick={() => setCurrentPage("academic-profiles")}>Academic Profiles</a></li>
                 </ul>
               </li>
 

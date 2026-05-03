@@ -11,17 +11,13 @@ function Home() {
       </div>
       <div className="hero-right">
         <h1>
-          My Portfolio
+          Abhay Singh Tomar
         </h1>
 
         <p>
           I am a Artificial Intelligence and Data Science Student passionate about AI, ML, and Web
-          Development. I build impactful projects and solve real-world problems.
+          Development.
         </p>
-
-        <div className="hero-buttons">
-          <button className="btn-primary">Explore Now</button>
-        </div>
       </div>
     </div>
   );

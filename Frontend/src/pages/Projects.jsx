@@ -78,7 +78,7 @@ function Projects() {
             </ul>
           </div>
         ),
-        github: "#"
+        github: "https://github.com/ClickSafe-Team/Phish-Secure"
       }
     },
     // {
@@ -134,7 +134,7 @@ function Projects() {
             <hr />
             <div><b className = "fw-bold" >DESCRIPTION:</b>{selected.details.description}</div>
             <div className="mt-3">
-              <a href={selected.details.github} className="btn btn-dark me-2">
+              <a href={selected.details.github} target="_blank" className="btn btn-dark me-2">
                 GitHub
               </a>
             </div>

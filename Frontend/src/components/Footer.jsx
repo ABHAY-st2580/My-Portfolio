@@ -12,7 +12,7 @@ function Footer() {
         <p className="mb-2">
           🔗 
           <a
-            href="https://github.com/"
+            href="https://github.com/ABHAY-st2580"
             target="_blank"
             className="text-info text-decoration-none mx-2"
           >
@@ -20,19 +20,11 @@ function Footer() {
           </a>
           |
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/tomarabhay835/"
             target="_blank"
             className="text-info text-decoration-none mx-2"
           >
             LinkedIn
-          </a>
-          |
-          <a
-            href="https://leetcode.com/"
-            target="_blank"
-            className="text-info text-decoration-none mx-2"
-          >
-            LeetCode
           </a>
         </p>
 

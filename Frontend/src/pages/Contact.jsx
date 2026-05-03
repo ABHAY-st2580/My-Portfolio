@@ -33,8 +33,8 @@ function Contact() {
         <div className="col-md-5 text-white">
           <h4 className="mb-4">Get in Touch</h4>
 
-          <p><b>Phone Number:</b> +91 8707631469</p>
-          <p><b>Whatsapp Number:</b> +91 8707631469</p>
+          <p><b>Phone Number:</b> +91 870763XXXX</p>
+          <p><b>Whatsapp Number:</b> +91 870763XXXX</p>
           <p><b>Email:</b> abhaysinghtomar835@gmail.com</p>
           <p>
             <b>LinkedIn:</b>{" "}
