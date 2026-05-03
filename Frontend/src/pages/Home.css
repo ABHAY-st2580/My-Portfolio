@@ -1,0 +1,81 @@
+.hero {
+  display: flex;
+  height: 100vh;
+  background: #071b46;
+  color: white;
+}
+
+.hero-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* IMAGE BOX */
+.image-box {
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;              /* rounded corners */
+  overflow: hidden;                 /* VERY IMPORTANT */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);  /* shadow */
+  background: #000;                 /* fallback */
+}
+
+/* IMAGE */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills box properly */
+}
+
+/* RIGHT CONTENT */
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.hero-right h1 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.hero-right span {
+  color: #e5e7eb;
+}
+
+.hero-right p {
+  margin-top: 20px;
+  color: #9ca3af;
+  max-width: 400px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #e5e7eb;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
