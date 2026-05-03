@@ -14,12 +14,14 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("Sending data:", form);
     try {
-      await axios.post("http://127.0.0.1:8000/api/contact/", form);
+      const res = await axios.post("/api/contact/", form);
+      console.log("Response:", res.data);
       alert("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error(error);
       alert("Error sending message");
     }
   };
@@ -52,27 +54,36 @@ function Contact() {
               borderRadius: "10px"
             }}
           >
-            <form>
+            <form onSubmit={handleSubmit}>
 
               <input
                 type="text"
                 placeholder="Your Name"
                 className="form-control mb-3"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
               />
 
               <input
                 type="email"
                 placeholder="Your Email"
                 className="form-control mb-3"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
               />
 
               <textarea
                 placeholder="Your Message"
                 className="form-control mb-3"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 rows="4"
               />
 
-              <button className="btn btn-success w-100">
+              <button type="submit" className="btn btn-success w-100">
                 Send Message
               </button>
 
