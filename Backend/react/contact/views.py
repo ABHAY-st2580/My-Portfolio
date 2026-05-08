@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import EmailMessage
-# from .models import Contact
+from .models import Contact
 import json
 
 
@@ -18,11 +18,11 @@ def contact_view(request):
             if not name or not email or not message:
                 return JsonResponse({'error': 'All fields required'}, status=400)
 
-            # Contact.objects.create(
-            #     name=name,
-            #     email=email,
-            #     message=message
-            # )
+            Contact.objects.create(
+                name=name,
+                email=email,
+                message=message
+            )
             email_obj = EmailMessage(
                 subject=f"New Contact Message via Portfolio from {name}",
                 
