@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://my-portfolio-1-vqdv.onrender.com',
+        target: 'https://my-portfolio-abhay.onrender.com',
         changeOrigin: true,
         secure: false,
       }

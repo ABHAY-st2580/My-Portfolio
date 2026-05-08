@@ -16,7 +16,7 @@ function Contact() {
     e.preventDefault();
     console.log("Sending data:", form);
     try {
-      const res = await axios.post("https://my-portfolio-1-vqdv.onrender.com/api/contact/", form);
+      const res = await axios.post("https://my-portfolio-abhay.onrender.com/api/contact/", form);
       console.log("Response:", res.data);
       alert("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
