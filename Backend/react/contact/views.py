@@ -23,27 +23,20 @@ def contact_view(request):
                 email=email,
                 message=message
             )
-            email_obj = EmailMessage(
-                subject=f"New Contact Message via Portfolio from {name}",
-                
-                body=f"""
-            New message received from your portfolio:
 
-            Name: {name}
-            Email: {email}
+            try:
+                email_obj = EmailMessage(
+                    subject=f"New Contact Message from {name}",
+                    body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}",
+                    from_email=os.getenv("EMAIL_HOST_USER"),
+                    to=[os.getenv("EMAIL_HOST_USER")],
+                    reply_to=[email]
+                )
+                email_obj.send(fail_silently=True)
+            except:
+                pass
 
-            Message:
-            {message}
-            """,
-
-                from_email="abhaysinghtomar835@gmail.com",   
-                to=["abhaysinghtomar835@gmail.com"],        
-                reply_to=[email]                             
-            )
-
-            email_obj.send(fail_silently=False)
-
-            return JsonResponse({'message': 'Message sent successfully'})
+            return JsonResponse({'message': 'Message stored successfully'})
 
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
